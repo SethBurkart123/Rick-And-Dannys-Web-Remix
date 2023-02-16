@@ -1,17 +1,24 @@
 const nicolasCage =
-  "https://i.guim.co.uk/img/media/dd3882c4ad0fd11a14cffc7e5edaabe5ce8a8b53/0_85_1077_646/master/1077.jpg?width=620&quality=45&dpr=2&s=none";
+  [
+    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/devito.jpg",
+    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/devito2.jpg"
+  ]
 
 const changeImg = () => {
   const imgs = document.querySelectorAll("img");
   const images = document.querySelectorAll("image");
 
   imgs.forEach((img) => {
-    img.src = nicolasCage;
-    img.srcset = "";
+    if (!nicolasCage.includes(img.src)) {
+      img.src = nicolasCage[Math.floor(Math.random()*nicolasCage.length)];
+      img.srcset = "";
+      img.style = 'object-fit: contain !important;';
+    }
   });
 
   images.forEach((img) => {
-    img.src = nicolasCage;
+    img.src = nicolasCage[Math.floor(Math.random()*nicolasCage.length)];
+    img.style = 'object-fit: contain !important;';
   });
 };
 
