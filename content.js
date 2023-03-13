@@ -5,21 +5,20 @@ const dannyDevito =
     "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/devito3.jpg",
     "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/devito4.avif"
   ]
-rickRoll = 
+//rickRoll = "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/nevergonnagiveyouup.mp4";
+//rickRollYoutube = "blob:https://www.youtube.com/76f6d70c-8305-4bda-b3a6-1f6581852bbc";
 
 const changeImg = () => {
+  /*if (window.location.href.includes("youtube.com/watch") && (window.location.href != 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')) {
+    window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+  }*/
   const imgs = document.querySelectorAll("img");
   const images = document.querySelectorAll("image");
-  const videos = document.querySelectorAll(".video");
+  /*const videos = document.getElementsByTagName("video");
 
-  videos.forEach((video) => {
-    if(video.rickroll.includes('rickrolled')) {
-      if(video.src.includes("blob")) {
-        video.src = rickRollYoutube;
-        video.setAttribute('rickrolled', 'true');
-      }
-    }
-  });
+  if (videos.length > 0) {
+    document.getElementsByTagName("html").innerHTML = "<video autoplay loop><source src='" + rickRoll + "' type='video/mp4'></video>"
+  }*/
 
   imgs.forEach((img) => {
     if (!dannyDevito.includes(img.src)) {
@@ -40,3 +39,4 @@ const changeImg = () => {
 changeImg();
 
 window.addEventListener("scroll", changeImg);
+window.addEventListener('locationchange', changeImg);
