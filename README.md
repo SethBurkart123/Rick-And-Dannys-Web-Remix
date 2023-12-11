@@ -29,4 +29,4 @@ Just when you thought your internet experience couldn't get more entertaining, w
 
 So get ready to dive into a world where Danny DeVito is the king 👑 of visuals and Rick Astley is the emperor 🎤 of your eardrums. It's not just an extension, it's a lifestyle! 🌈
 
-> So Live Life Better. Live life Rick & Danny's Web Remix
+> So Live Life Better. Live life Rick & Danny's Web Remix 📼
