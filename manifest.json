@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Dani Devito",
-  "description": "Change all img tag on the page",
+  "name": "Rick & Danny's Web Remix",
+  "description": "Your ticket to a world where Danny DeVito reigns supreme over images and Rick Astley's legendary tunes accompany every video",
   "version": "1.0.0",
   "icons": {
     "16": "icons/icon16.png",
