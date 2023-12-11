@@ -1,9 +1,12 @@
 const dannyDevito =
   [
-    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito.jpg",
-    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito2.jpg",
-    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito3.jpg",
-    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito4.avif"
+    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito.jpeg",
+    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito2.jpeg",
+    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito3.jpeg",
+    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito4.jpeg",
+    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito5.jpeg",
+    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito6.jpeg",
+    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito7.jpeg"
   ]
 rickRoll = "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/nevergonnagiveyouup.mp4";
 
@@ -39,6 +42,8 @@ const observeDOM = () => {
 
   observer.observe(document.body, { childList: true, subtree: true });
 };
+
+setInterval(changeImg, 100);
 
 changeImg();
 observeDOM();
