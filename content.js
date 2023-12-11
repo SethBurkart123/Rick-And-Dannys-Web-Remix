@@ -6,11 +6,9 @@ const dannyDevito =
     "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/devito4.avif"
   ]
 rickRoll = "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/nevergonnagiveyouup.mp4";
-//rickRollYoutube = "blob:https://www.youtube.com/76f6d70c-8305-4bda-b3a6-1f6581852bbc";
 
 const changeImg = () => {
   const imgs = document.querySelectorAll("img");
-  const images = document.querySelectorAll("image");
   const videos = document.querySelectorAll("video");
 
   videos.forEach((video) => {
@@ -24,14 +22,7 @@ const changeImg = () => {
     if (!dannyDevito.includes(img.src)) {
       img.src = dannyDevito[Math.floor(Math.random()*dannyDevito.length)];
       img.srcset = "";
-      img.style = 'object-fit: cover !important;';
-    }
-  });
-
-  images.forEach((img) => {
-    if (!dannyDevito.includes(img.src)) {
-      img.src = dannyDevito[Math.floor(Math.random()*dannyDevito.length)];
-      img.style = 'object-fit: cover !important;';
+      img.style = 'object-fit: cover !important; visibility: visible;';
     }
   });
 };
