@@ -1,3 +1,0 @@
-a :nth-child(3) > span {
-  overflow: clip; // this styling fixes google overflowing the images
-}
