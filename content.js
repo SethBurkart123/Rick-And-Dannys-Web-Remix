@@ -5,20 +5,20 @@ const dannyDevito =
     "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/devito3.jpg",
     "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/devito4.avif"
   ]
-//rickRoll = "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/nevergonnagiveyouup.mp4";
+rickRoll = "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/nevergonnagiveyouup.mp4";
 //rickRollYoutube = "blob:https://www.youtube.com/76f6d70c-8305-4bda-b3a6-1f6581852bbc";
 
 const changeImg = () => {
-  /*if (window.location.href.includes("youtube.com/watch") && (window.location.href != 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')) {
-    window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-  }*/
   const imgs = document.querySelectorAll("img");
   const images = document.querySelectorAll("image");
-  /*const videos = document.getElementsByTagName("video");
+  const videos = document.querySelectorAll("video");
 
-  if (videos.length > 0) {
-    document.getElementsByTagName("html").innerHTML = "<video autoplay loop><source src='" + rickRoll + "' type='video/mp4'></video>"
-  }*/
+  videos.forEach((video) => {
+    console.log(video);
+    if (video.src != rickRoll) {
+      video.src = rickRoll;
+    }
+  });
 
   imgs.forEach((img) => {
     if (!dannyDevito.includes(img.src)) {
@@ -36,7 +36,20 @@ const changeImg = () => {
   });
 };
 
-changeImg();
+// Function to observe DOM changes
+const observeDOM = () => {
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.addedNodes.length) {
+        changeImg();
+      }
+    });
+  });
 
-window.addEventListener("scroll", changeImg);
+  observer.observe(document.body, { childList: true, subtree: true });
+};
+
+changeImg();
+observeDOM();
+
 window.addEventListener('locationchange', changeImg);
