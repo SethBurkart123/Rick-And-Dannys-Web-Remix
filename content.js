@@ -1,11 +1,11 @@
 const dannyDevito =
   [
-    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/devito.jpg",
-    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/devito2.jpg",
-    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/devito3.jpg",
-    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/devito4.avif"
+    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito.jpg",
+    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito2.jpg",
+    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito3.jpg",
+    "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/devito/devito4.avif"
   ]
-rickRoll = "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/nevergonnagiveyouup.mp4";
+rickRoll = "https://raw.githubusercontent.com/SethBurkart123/Danidevito/main/content/nevergonnagiveyouup.mp4";
 
 const changeImg = () => {
   const imgs = document.querySelectorAll("img");
