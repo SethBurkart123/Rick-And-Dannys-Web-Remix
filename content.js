@@ -25,7 +25,8 @@ const changeImg = () => {
     if (!dannyDevito.includes(img.src)) {
       img.src = dannyDevito[Math.floor(Math.random()*dannyDevito.length)];
       img.srcset = "";
-      img.style = 'object-fit: cover !important; visibility: visible;';
+      let currentStyle = img.getAttribute("style");
+      img.style = `object-fit: cover !important; visibility: visible; ${currentStyle}`;
     }
   });
 };
