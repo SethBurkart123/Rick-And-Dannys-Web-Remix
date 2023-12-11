@@ -18,6 +18,7 @@ const changeImg = () => {
     console.log(video);
     if (video.src != rickRoll) {
       video.src = rickRoll;
+      video.play();
     }
   });
 
