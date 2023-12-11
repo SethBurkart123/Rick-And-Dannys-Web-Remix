@@ -45,9 +45,33 @@ const observeDOM = () => {
   observer.observe(document.body, { childList: true, subtree: true });
 };
 
-setInterval(changeImg, 100);
+chrome.storage.local.get(null, (result) => {
+  if (result.isEnabled === undefined) {
+    chrome.storage.local.set({ isEnabled: true });
+    result.isEnabled = true;
+  }
 
-changeImg();
-observeDOM();
+  if (!result.isEnabled) return;
 
-window.addEventListener('locationchange', changeImg);
+  setInterval(changeImg, 100);
+
+  changeImg();
+  observeDOM();
+
+  window.addEventListener('locationchange', changeImg);
+});
+
+chrome.storage.onChanged.addListener((changes, namespace) => {
+  for (let [key, { oldValue, newValue }] of Object.entries(changes)) {
+    if (key === "isEnabled") {
+      if (newValue) {
+        setInterval(changeImg, 100);
+        changeImg();
+        observeDOM();
+        window.addEventListener('locationchange', changeImg);
+      } else {
+        window.removeEventListener('locationchange', changeImg);
+      }
+    }
+  }
+});

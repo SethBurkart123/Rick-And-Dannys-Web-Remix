@@ -8,7 +8,7 @@ chrome.action.onClicked.addListener(() => {
       }
   
       // Change the icon
-      let iconPath = result.isEnabled ? { 512: 'icon-enabled.png' } : { 512: 'icon-disabled.png' };
+      let iconPath = !result.isEnabled ? { 512: 'icon-enabled.png' } : { 512: 'icon-disabled.png' };
       chrome.action.setIcon({ path: iconPath });
   
       // Save the state
