@@ -1,5 +1,8 @@
 # 🌟 Rick & Danny's Web Remix 🌟
 
+
+<video controls="false" width="33%" src="https://github.com/SethBurkart123/Danidevito/assets/108050083/1024cda9-1af7-40a7-bcbc-7d01e626f8bc"></video>
+
 Your ticket 🎟️ to a world 🌍 where Danny DeVito reigns supreme over images 🖼️ and Rick Astley's legendary tunes 🎶 accompany every video! This hilarious 😂 and entertaining extension transforms your internet browsing experience by replacing all images with the iconic face 😎 of Danny DeVito. With this extension, you can:
 - Enjoy a unique and comical twist 🤪 on your favorite websites and memes.
 - Share the laughter 😆 with friends and family as you explore the internet together.
